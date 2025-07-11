@@ -1,0 +1,176 @@
+.gjeans-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.gjeans-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.gjeans-header h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.gjeans-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.gjeans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.gjeans-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gjeans-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  position: relative;
+}
+
+.gjeans-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.quick-view-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #ffffffcc;
+  color: #2c3e50;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.quick-view-btn:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.gjeans-details {
+  padding: 1.5rem;
+}
+
+.gjeans-details h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  color: #34495e;
+}
+
+.price-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.gjeans-price {
+  font-weight: bold;
+  color: #3498db;
+  font-size: 1.3rem;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1rem;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: #f1c40f;
+}
+
+.gjeans-desc {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.5rem 0 1rem;
+}
+
+.gjeans-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gjeans-cart-btn {
+  flex: 1;
+  padding: 0.7rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.gjeans-cart-btn:hover {
+  background: #2c80b4;
+}
+
+.gjeans-wishlist-btn {
+  width: 40px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.gjeans-wishlist-btn:hover {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .gjeans-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .gjeans-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gjeans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gjeans-container {
+    padding: 1.5rem 1rem;
+  }
+}

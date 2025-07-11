@@ -1,0 +1,139 @@
+/* Main Container */
+.dresses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.store-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+/* Products Grid */
+.dresses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Dress Card */
+.dress-card {
+  background: white;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  border: 1px solid #f0f0f0;
+}
+
+/* Image Container */
+.dress-image-container {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.dress-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.dress-card:hover .dress-image {
+  transform: scale(1.03);
+}
+
+/* Quick View Button */
+.quick-view-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.quick-view-btn:hover {
+  background: #333;
+  color: white;
+}
+
+/* Dress Info */
+.dress-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.dress-name {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.dress-price {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.dress-rating {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.star {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #333;
+}
+
+.dress-details {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.5rem 0 1rem;
+  font-style: italic;
+}
+
+.divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 1rem auto;
+  width: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dresses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dress-image-container {
+    height: 350px;
+  }
+  
+  .store-title {
+    font-size: 2rem;
+  }
+}

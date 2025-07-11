@@ -1,0 +1,185 @@
+/* Main Container */
+.ws-sandals-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Header Styles */
+.ws-sandals-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ws-sandals-header h1 {
+  font-size: 2.2rem;
+  color: #2d3436;
+  margin-bottom: 0.5rem;
+}
+
+.ws-sandals-header p {
+  color: #636e72;
+  font-size: 1.1rem;
+}
+
+/* Grid Layout */
+.ws-sandals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Card Style */
+.ws-sandals-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.ws-sandals-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.image-container {
+  position: relative;
+}
+
+.ws-sandals-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* Quick View Button */
+.quick-view-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #ffffffcc;
+  color: #2d3436;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.quick-view-btn:hover {
+  background-color: #0984e3;
+  color: #fff;
+}
+
+/* Details */
+.ws-sandals-details {
+  padding: 1.5rem;
+}
+
+.ws-sandals-details h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2d3436;
+}
+
+/* Price & Rating */
+.price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.ws-price {
+  font-weight: bold;
+  color: #0984e3;
+  font-size: 1.3rem;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #f1c40f;
+}
+
+/* Description */
+.ws-desc {
+  font-size: 0.9rem;
+  color: #636e72;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Actions */
+.ws-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ws-cart-btn {
+  flex: 1;
+  padding: 0.7rem;
+  background: #0984e3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ws-cart-btn:hover {
+  background: #086adb;
+}
+
+.ws-wishlist-btn {
+  width: 40px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ws-wishlist-btn:hover {
+  color: #d63031;
+  border-color: #d63031;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ws-sandals-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .ws-sandals-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ws-sandals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ws-sandals-container {
+    padding: 1.5rem 1rem;
+  }
+}

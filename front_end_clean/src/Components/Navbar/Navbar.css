@@ -1,0 +1,300 @@
+/* Tightened Layout */
+.navbar-container {
+  width: 100%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* Add these to your existing Navbar.css */
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.mobile-menu-btn span {
+  width: 2rem;
+  height: 0.25rem;
+  background: #333;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* User Dropdown */
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-icon {
+  margin-right: 8px;
+  color: #555;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+.logout-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background: white;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-menu li {
+    margin: 1rem 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .dropdown-column {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Dropdown arrow */
+.dropdown-arrow {
+  margin-left: 5px;
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+}
+
+.nav-menu li:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  height: 55px;
+}
+
+/* Compact Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo img {
+  height: 32px;
+}
+
+.nav-logo p {
+  color: black;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Tighter Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-menu li {
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* Hover and Active States */
+.nav-menu li a:hover {
+  color: #4a6bff; /* Blue color for hover */
+}
+
+.nav-menu li.active a {
+  color: #4a6bff; /* Same blue color for active state */
+  font-weight: 600;
+  border-bottom: 2px solid #4a6bff; /* Underline effect */
+  padding-bottom: 4px;
+}
+
+/* Compact Dropdown */
+.dropdown-menu {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  background: white;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  border-radius: 0 0 6px 6px;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  min-width: 500px;
+  z-index: 1001;
+}
+
+.dropdown-column {
+  min-width: 120px;
+}
+
+.dropdown-column h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-column li {
+  margin-bottom: 6px;
+}
+
+.dropdown-column li a {
+  color: #666;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.dropdown-column li a:hover {
+  color: #4a6bff;
+  padding-left: 4px;
+}
+
+/* Compact Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-btn {
+  padding: 6px 16px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  font-size: 13px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.cart-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.cart-link:hover .cart-icon {
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #4a6bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  font-weight: bold;
+}

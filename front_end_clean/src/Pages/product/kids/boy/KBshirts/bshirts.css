@@ -1,0 +1,185 @@
+.bshirts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Header */
+.bshirts-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.bshirts-header h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.bshirts-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Grid */
+.bshirts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.bshirts-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  background: white;
+}
+
+.bshirts-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.image-container {
+  position: relative;
+}
+
+.bshirts-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* Quick View */
+.quick-view-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #ffffffcc;
+  color: #2c3e50;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s ease;
+}
+
+.quick-view-btn:hover {
+  background-color: #4a6bff;
+  color: #fff;
+}
+
+/* Details */
+.bshirts-details {
+  padding: 1.5rem;
+}
+
+.bshirts-details h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+/* Price and Rating */
+.price-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.bshirts-price {
+  font-weight: bold;
+  color: #4a6bff;
+  font-size: 1.3rem;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #f1c40f;
+}
+
+/* Description */
+.bshirts-desc {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.bshirts-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bshirts-cart-btn {
+  flex: 1;
+  padding: 0.7rem;
+  background: #4a6bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.bshirts-cart-btn:hover {
+  background: #3a5bef;
+}
+
+.bshirts-wishlist-btn {
+  width: 40px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.bshirts-wishlist-btn:hover {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bshirts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .bshirts-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bshirts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bshirts-container {
+    padding: 1.5rem 1rem;
+  }
+}

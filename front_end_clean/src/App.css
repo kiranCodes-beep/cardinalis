@@ -1,0 +1,251 @@
+this is my app.css /* Base App Styles */
+.App {
+  text-align: center;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Layout Structure */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+   
+}
+
+/* Navbar Styles */
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Hero Component Styles */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  min-height: calc(100vh - 55px); /* Account for navbar height */
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  max-width: 50%;
+}
+
+.hero-left h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.hand-icon img {
+  height: 30px;
+  animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  75% { transform: rotate(-15deg); }
+}
+
+.hero-left p {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: #111;
+  line-height: 1.2;
+}
+
+.hero-latest-btn {
+  display: flex;
+  align-items: center;
+  background-color: #ff4141;
+  color: white;
+  padding: 14px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  width: fit-content;
+  cursor: pointer;
+  gap: 12px;
+  border-radius: 4px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.hero-latest-btn:hover {
+  background-color: #e03a3a;
+  transform: scale(1.02);
+}
+
+.hero-latest-btn img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hero-latest-btn:hover img {
+  transform: translateX(5px);
+}
+
+.hero-right img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 2rem 0;
+  margin-top: auto; /* Pushes footer to bottom */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #4a6bff;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.footer-section p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #4a6bff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #4a6bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+  
+  .hero-left {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-right img {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .hero-left p {
+    font-size: 32px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-bottom: 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Remove default CRA styles if not needed */
+/* .App-logo, .App-header, .App-link styles can be removed if unused */

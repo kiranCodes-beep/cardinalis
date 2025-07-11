@@ -1,0 +1,270 @@
+.mw-joggers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mw-joggers-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.mw-joggers-header h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.mw-joggers-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.mw-joggers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.mw-joggers-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.mw-joggers-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.mw-joggers-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mw-joggers-card:hover .mw-joggers-image {
+  transform: scale(1.02);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e74c3c;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.quick-view-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  width: 80%;
+  text-align: center;
+}
+
+.mw-joggers-card:hover .quick-view-btn {
+  opacity: 1;
+}
+
+.quick-view-btn:hover {
+  background: #4a6bff;
+  color: white;
+}
+
+.mw-joggers-details {
+  padding: 1.2rem 1.5rem;
+}
+
+.mw-joggers-details h2 {
+  font-size: 1.15rem;
+  color: #2c3e50;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mw-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a6bff;
+}
+
+.old-price {
+  font-size: 0.9rem;
+  color: #95a5a6;
+  text-decoration: line-through;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.star.filled {
+  color: #f1c40f;
+}
+
+.star.half-filled {
+  position: relative;
+}
+
+.star.half-filled::after {
+  content: '★';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f1c40f;
+}
+
+.mw-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.mw-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.mw-cart-btn {
+  flex: 1;
+  padding: 0.7rem;
+  background: #4a6bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mw-cart-btn:hover {
+  background: #3a5bef;
+  transform: translateY(-1px);
+}
+
+.mw-wishlist-btn {
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #555;
+}
+
+.mw-wishlist-btn:hover {
+  color: #e74c3c;
+  border-color: #e74c3c;
+  transform: translateY(-1px);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .mw-joggers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mw-joggers-header h1 {
+    font-size: 1.9rem;
+  }
+  
+  .mw-joggers-header p {
+    font-size: 1rem;
+  }
+  
+  .mw-joggers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  
+  .mw-joggers-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mw-joggers-container {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .mw-joggers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .mw-joggers-details {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mw-joggers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mw-joggers-header h1 {
+    font-size: 1.7rem;
+  }
+  
+  .quick-view-btn {
+    opacity: 1;
+    width: auto;
+    padding: 0.4rem 0.8rem;
+    bottom: 10px;
+  }
+}

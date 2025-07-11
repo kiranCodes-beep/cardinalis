@@ -1,0 +1,219 @@
+/* Main Container */
+.cf-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header Styles */
+.cf-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cf-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.cf-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Products Grid */
+.cf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Product Card */
+.cf-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cf-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Image Container */
+.cf-image-container {
+  position: relative;
+}
+
+.cf-product-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.cf-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #4a6bff;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Product Details */
+.cf-details {
+  padding: 1.5rem;
+}
+
+.cf-details h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+/* Price & Rating */
+.cf-price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cf-price {
+  font-weight: bold;
+  color: #4a6bff;
+  font-size: 1.3rem;
+}
+
+.cf-rating {
+  display: flex;
+  align-items: center;
+}
+
+.cf-star {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.cf-star.filled {
+  color: #f1c40f;
+}
+
+.cf-rating-count {
+  margin-left: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Description */
+.cf-description {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+/* Features */
+.cf-features {
+  margin-bottom: 1.2rem;
+}
+
+.cf-features h4 {
+  font-size: 0.95rem;
+  margin: 0 0 8px 0;
+  color: #444;
+}
+
+.cf-features ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.cf-features li {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+/* Size Selector */
+.cf-size-selector {
+  margin-bottom: 1.5rem;
+}
+
+.cf-size-selector label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.cf-size-selector select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+/* Action Buttons */
+.cf-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.cf-add-to-cart {
+  flex: 1;
+  padding: 10px;
+  background: #4a6bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cf-add-to-cart:hover {
+  background: #3a5bef;
+}
+
+.cf-wishlist {
+  width: 45px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+
+.cf-wishlist:hover {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cf-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .cf-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cf-header h2 {
+    font-size: 1.6rem;
+  }
+}
